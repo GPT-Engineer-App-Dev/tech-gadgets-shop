@@ -1,4 +1,5 @@
-import { Box, Container, Flex, Heading, Text, VStack, HStack, Image, Link, SimpleGrid, Button } from "@chakra-ui/react";
+import { Box, Container, Flex, Heading, Text, VStack, HStack, Image, Link, SimpleGrid, Button, Input, InputGroup, InputRightElement } from "@chakra-ui/react";
+import { SearchIcon } from "@chakra-ui/icons";
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 import { Link as RouterLink } from "react-router-dom";
 
@@ -10,6 +11,10 @@ const Index = () => {
         <Heading as="h1" size="lg">
           <RouterLink to="/">ElectroShop</RouterLink>
         </Heading>
+        <InputGroup maxW="400px" ml={4}>
+          <Input placeholder="Search for products..." />
+          <InputRightElement children={<SearchIcon color="gray.300" />} />
+        </InputGroup>
         <HStack spacing={8}>
           <Link as={RouterLink} to="/">Home</Link>
           <Link as={RouterLink} to="/products">Products</Link>
